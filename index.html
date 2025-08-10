@@ -1,17 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> Smart Dependency Graph Forge App</title>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dependency Graph & Project Tracer for Jira - by AlgoAITek</title>
+    <style>
+        /* Basic CSS for a clean, modern look */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f5f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #0052CC; /* Atlassian Blue */
+            color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .header .tagline {
+            font-size: 1.4em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50; /* A contrasting green */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-size: 1.1em;
+            transition: background-color 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        .section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #dfe1e6;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #172B4D; /* Atlassian Dark Text */
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .feature-text {
+            flex: 1;
+        }
+        .feature-text h3 {
+            font-size: 1.8em;
+            color: #0052CC;
+        }
+        .feature-image {
+            flex: 1;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #555;
+            min-height: 250px; /* Placeholder height */
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #172B4D;
+            color: white;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .footer a {
+            color: #4BADE8; /* A light blue for links */
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .feature {
+                flex-direction: column !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Smart Dependency Graph Forge App</h1>
-    <p>Welcome! This is the official home for Smart Dependency Graph Forge App, available on the Atlassian Marketplace.</p>
-    
-    <h2>Links</h2>
-    <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="https://marketplace.atlassian.com/apps/YOUR-APP-ID">View on Marketplace</a></li>
-    </ul>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Stop Guessing. Start Visualizing.</h1>
+        <p class="tagline">The ultimate tool to untangle your Jira project dependencies.</p>
+        <a href="YOUR_MARKETPLACE_APP_LINK" class="cta-button">Install from Atlassian Marketplace</a>
+    </header>
+
+    <div class="container">
+
+        <!-- "Why You Need This" Section -->
+        <section class="section">
+            <h2>Your Projects Are More Connected Than You Think</h2>
+            <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto;">
+                In modern software development, no task stands alone. Hidden dependencies across teams and projects create surprise blockers, delay releases, and make planning a nightmare. Navigating endless ticket links to find the root cause of a problem is slow and inefficient. <strong>Dependency Graph & Project Tracer</strong> by AlgoAITek replaces this guesswork with instant clarity.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <h2>Powerful Features, Effortless Insight</h2>
+
+            <!-- Feature 1: Interactive Graph -->
+            <div class="feature">
+                <div class="feature-text">
+                    <h3>Visualize Your Entire Dependency Web</h3>
+                    <p>Transform your projects into a dynamic, interactive graph. See how issues are connected, identify critical paths, and understand the real structure of your workflow. Our clean, color-coded interface makes complex information easy to digest.</p>
+                </div>
+                <div class="feature-image">
+                    [Screenshot of the main graph view with several connected nodes]
+                </div>
+            </div>
+
+            <!-- Feature 2: Issue Tracer -->
+            <div class="feature">
+                <div class="feature-text">
+                    <h3>Trace Any Issue in Seconds</h3>
+                    <p>Is a critical ticket blocked? Enter its key into the tracer and instantly get a complete, end-to-end dependency map. See everything that blocks your issue (upstream) and everything it blocks (downstream), even across other projects.</p>
+                </div>
+                <div class="feature-image">
+                    [Screenshot showing the trace input field with a smaller, focused graph]
+                </div>
+            </div>
+
+            <!-- Feature 3: Multi-Project & Exports -->
+            <div class="feature">
+                <div class="feature-text">
+                    <h3>Analyze, Report, and Share</h3>
+                    <p>Our tool isn't just for viewing. Select multiple projects to analyze cross-team dependencies. When you've found the insight you need, export the graph to a high-quality PNG for your presentations or to a detailed CSV for offline analysis and reporting.</p>
+                </div>
+                <div class="feature-image">
+                    [Composite image showing a PNG export icon and a CSV icon]
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action Section -->
+        <section class="section" style="background-color: #fff; border-radius: 10px; padding: 60px;">
+            <h2>Ready to Take Control of Your Workflows?</h2>
+            <p style="text-align: center;">
+                Built on Atlassian's secure Forge platform, our app is safe, fast, and integrates seamlessly with your Jira Cloud instance.
+            </p>
+            <div style="text-align: center;">
+                <a href="https://marketplace.atlassian.com/apps/1238453" class="cta-button">Start Your Free Trial Today</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 AlgoAITek. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="support.html">Contact Support</a></p>
+    </footer>
+
 </body>
 </html>

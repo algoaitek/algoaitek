@@ -1,70 +1,208 @@
-# Security and Data Privacy Policy for Dependency Graph 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Data Privacy Policy - AlgoAITek</title>
+    <style>
+        /* --- General Body & Typography --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #172B4D; /* Atlassian Dark Text */
+            background-color: #FAFBFC; /* Atlassian Light Background */
+            margin: 0;
+            padding: 0;
+        }
 
-**Vendor:** AlgoAITek
-**App:** Dependency Graph 
-**Effective Date:** Jan 22, 2025
+        /* --- Layout & Container --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px 40px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #DFE1E6;
+        }
 
-## Our Commitment to Your Security
+        /* --- Headings --- */
+        h1, h2, h3 {
+            color: #091E42; /* Atlassian Deeper Text */
+            font-weight: 600;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0052CC;
+            padding-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #0052CC; /* Atlassian Blue */
+        }
+        h3 {
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
 
-At AlgoAITek, we are deeply committed to protecting your data and respecting your privacy. We believe in transparency and the principle of least privilege. This document outlines the data our app accesses, why we need it, and how we keep it safe.
+        /* --- Links, Lists, and Code --- */
+        a {
+            color: #0065FF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #F0F2F5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9em;
+        }
 
-Our app, **Dependency Graph**, is built exclusively on Atlassian's secure and modern **Forge platform**. This is a critical aspect of our security posture, as it means our app runs in a sandboxed environment with managed infrastructure, benefiting directly from Atlassian's own robust security practices.
+        /* --- Header & Footer --- */
+        .page-header {
+            margin-bottom: 40px;
+        }
+        .page-header p {
+            text-align: center;
+            color: #5E6C84;
+            margin-top: 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #DFE1E6;
+            font-size: 0.9em;
+            color: #6B778C;
+        }
 
-## Data We Process
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
 
-Our app is designed to be **read-only** in relation to your Jira data. We do not create, modify, or delete any of your issues, projects, or configurations. To provide our visualization and tracing features, we need to access specific information from your Jira instance.
+    <div class="container">
+        <header class="page-header">
+            <h1>Security and Data Privacy Policy</h1>
+            <p><strong>Vendor:</strong> AlgoAITek | <strong>App:</strong> Dependency Graph for Jira</p>
+            <p>Effective Date: Jan 22, 2025</p>
+        </header>
 
-#### **1. Jira Issue Data**
-*   **Issue Key, Summary, Status, and Issue Type:** Used to render the nodes on the graph and display basic information.
-*   **Issue Links:** The core data used to build the dependency edges between nodes.
-*   **Assignee, Reporter, Due Date, Sprint:** Displayed in the "Issue Detail Panel" when you click on a specific node.
-*   **Project Information (associated with an issue):** Used to color-code nodes and differentiate between projects in the graph.
+        <section>
+            <h2>Our Commitment to Your Security</h2>
+            <p>At AlgoAITek, we are deeply committed to protecting your data and respecting your privacy. We believe in transparency and the principle of least privilege. This document outlines the data our app accesses, why we need it, and how we keep it safe.</p>
+            <p>Our app, <strong>Dependency Graph</strong>, is built exclusively on Atlassian's secure and modern <strong>Forge platform</strong>. This is a critical aspect of our security posture, as it means our app runs in a sandboxed environment with managed infrastructure, benefiting directly from Atlassian's own robust security practices.</p>
+        </section>
 
-#### **2. Jira Project & Configuration Data**
-*   **List of Projects:** To populate the dropdown in the Settings modal, allowing you to select which projects you want to visualize. This list is filtered to only show projects the current user has permission to see.
-*   **List of Issue Link Types:** To populate the dropdown in the Settings modal, allowing you to choose which dependency relationship (e.g., "Blocks," "Relates to") the graph should be based on.
+        <section>
+            <h2>Data We Process</h2>
+            <p>Our app is designed to be <strong>read-only</strong> in relation to your Jira data. We do not create, modify, or delete any of your issues, projects, or configurations. To provide our visualization and tracing features, we need to access specific information from your Jira instance.</p>
 
-#### **3. User Data**
-*   **User Account ID:** We use your Atlassian Account ID as a key to save your personal app settings (selected projects and chosen link type) via the Forge Storage API. We do not store your name, email, or any other personal identifiable information.
+            <h3>1. Jira Issue Data</h3>
+            <ul>
+                <li><strong>Issue Key, Summary, Status, and Issue Type:</strong> Used to render the nodes on the graph and display basic information.</li>
+                <li><strong>Issue Links:</strong> The core data used to build the dependency edges between nodes.</li>
+                <li><strong>Assignee, Reporter, Due Date, Sprint:</strong> Displayed in the "Issue Detail Panel" when you click on a specific node.</li>
+                <li><strong>Project Information (associated with an issue):</strong> Used to color-code nodes and differentiate between projects in the graph.</li>
+            </ul>
 
-## How We Use Your Data
+            <h3>2. Jira Project & Configuration Data</h3>
+            <ul>
+                <li><strong>List of Projects:</strong> To populate the dropdown in the Settings modal, allowing you to select which projects you want to visualize. This list is filtered to only show projects the current user has permission to see.</li>
+                <li><strong>List of Issue Link Types:</strong> To populate the dropdown in the Settings modal, allowing you to choose which dependency relationship (e.g., "Blocks," "Relates to") the graph should be based on.</li>
+            </ul>
+            
+            <h3>3. User Data</h3>
+            <ul>
+                <li><strong>User Account ID:</strong> We use your Atlassian Account ID as a key to save your personal app settings (selected projects and chosen link type) via the Forge Storage API. We do not store your name, email, or any other personal identifiable information.</li>
+            </ul>
+        </section>
 
-Your data is used exclusively to provide the features of the app. We do not use your data for any other purpose, such as advertising, analytics (outside of what Atlassian provides), or sharing with third parties.
+        <section>
+            <h2>How We Use Your Data</h2>
+            <p>Your data is used exclusively to provide the features of the app. We do not use your data for any other purpose, such as advertising, analytics (outside of what Atlassian provides), or sharing with third parties.</p>
+            <ul>
+                <li><strong>To Build the Graph:</strong> We read issue and link data to render the interactive dependency graph.</li>
+                <li><strong>To Provide App Settings:</strong> We read project and link type data to allow you to configure the app to your needs.</li>
+                <li><strong>To Save Your Preferences:</strong> We use your Account ID to store your settings securely, so you don't have to reconfigure the app every time you use it.</li>
+                <li><strong>To Verify Your License:</strong> We access the license status provided by Atlassian to confirm that you have an active subscription or trial for our <a href="YOUR_MARKETPLACE_APP_LINK">Marketplace App</a>.</li>
+            </ul>
+        </section>
 
-*   **To Build the Graph:** We read issue and link data to render the interactive dependency graph.
-*   **To Provide App Settings:** We read project and link type data to allow you to configure the app to your needs.
-*   **To Save Your Preferences:** We use your Account ID to store your settings securely, so you don't have to reconfigure the app every time you use it.
-*   **To Verify Your License:** We access the license status provided by Atlassian to confirm that you have an active subscription or trial.
+        <section>
+            <h2>Data Storage and Hosting</h2>
+            <p>This is a key security benefit of our Forge app.</p>
+            <ul>
+                <li><strong>No External Servers:</strong> The app's backend logic runs entirely on Atlassian's managed Forge infrastructure. <strong>We do not operate our own external servers, and your Jira data never leaves the Atlassian ecosystem.</strong></li>
+                <li><strong>Forge Storage API:</strong> Your saved settings are stored using the Forge Storage API. This means the data is stored within your Atlassian site's own storage partition, hosted alongside your other Jira data and subject to Atlassian's data residency policies.</li>
+            </ul>
+        </section>
 
-## Data Storage and Hosting
+        <section>
+            <h2>Permissions and Scopes</h2>
+            <p>Our app requests the minimum permissions necessary to function:</p>
+            <ul>
+                <li><code>read:jira-work</code>: This scope allows the app to read Jira issue and project data on behalf of the user. This is the core permission required to build the graph. The app <strong>does not</strong> request <code>write:jira-work</code> permission.</li>
+                <li><code>storage:app</code>: This scope allows the app to save and retrieve your personal settings using the secure Forge Storage API.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Third-Party Services</h2>
+            <p><strong>Dependency Graph for Jira does not integrate with or share any data with any third-party services.</strong> All functionality is self-contained within the app and the Atlassian platform.</p>
+        </section>
 
-This is a key security benefit of our Forge app.
+        <section>
+            <h2>Data Security and Compliance</h2>
+            <p>By building on the Forge platform, our app inherits Atlassian’s world-class security posture, including:</p>
+            <ul>
+                <li><strong>Infrastructure:</strong> Hosted and managed by Atlassian on AWS.</li>
+                <li><strong>Sandboxing:</strong> Our app runs in an isolated iframe and a secure backend lambda function, preventing interference with the Jira UI or other apps.</li>
+                <li><strong>Authentication & Authorization:</strong> All API calls respect the logged-in user's permissions, ensuring users can only see the data they are already authorized to see within Jira.</li>
+            </ul>
+        </section>
 
-*   **No External Servers:** The app's backend logic runs entirely on Atlassian's managed Forge infrastructure. **We do not operate our own external servers, and your Jira data never leaves the Atlassian ecosystem.**
-*   **Forge Storage API:** Your saved settings are stored using the Forge Storage API. This means the data is stored within your Atlassian site's own storage partition, hosted alongside your other Jira data and subject to Atlassian's data residency policies.
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or concerns about our security practices or your data, please do not hesitate to contact us at <a href="mailto:YOUR_SUPPORT_EMAIL">YOUR_SUPPORT_EMAIL</a>.</p>
+        </section>
+        
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>We may update this policy from time to time. We will notify you of any significant changes by updating the policy on this page. We encourage you to review this policy periodically.</p>
+        </section>
 
-## Permissions and Scopes
+        <footer class="footer">
+            <p>&copy; 2024 AlgoAITek. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="mailto:support@algoaitek.com">Contact Support</a></p>
+        </footer>
+    </div>
 
-Our app requests the minimum permissions necessary to function:
-
-*   **`read:jira-work`**: This scope allows the app to read Jira issue and project data on behalf of the user. This is the core permission required to build the graph. The app **does not** request `write:jira-work` permission.
-*   **`storage:app`**: This scope allows the app to save and retrieve your personal settings using the secure Forge Storage API.
-
-## Third-Party Services
-
-**Dependency Graph does not integrate with or share any data with any third-party services.** All functionality is self-contained within the app and the Atlassian platform.
-
-## Data Security and Compliance
-
-By building on the Forge platform, our app inherits Atlassian’s world-class security posture, including:
-*   **Infrastructure:** Hosted and managed by Atlassian on AWS.
-*   **Sandboxing:** Our app runs in an isolated iframe and a secure backend lambda function, preventing interference with the Jira UI or other apps.
-*   **Authentication & Authorization:** All API calls respect the logged-in user's permissions, ensuring users can only see the data they are already authorized to see within Jira.
-
-## Contact Us
-
-If you have any questions or concerns about our security practices or your data, please do not hesitate to contact us at **support@algoaitek.com**.
-
-## Changes to This Policy
-
-We may update this policy from time to time. We will notify you of any significant changes by updating the policy on this page. We encourage you to review this policy periodically.
+</body>
+</html>
